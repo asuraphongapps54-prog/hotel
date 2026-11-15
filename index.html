@@ -199,6 +199,9 @@ textarea.input{min-height:84px;resize:vertical}
 .mh b{font-family:var(--f-head)}
 .mtot{font-family:var(--f-mono);font-weight:600;white-space:nowrap}
 .mtot.bad{color:var(--bad);font-family:var(--f-body);font-size:.84rem}
+.mtot.warn{color:#B45309;font-family:var(--f-body);font-size:.84rem;white-space:normal}
+.duo{display:grid;gap:16px;align-items:start}.duo>div:empty{display:none}.duo .newsbig{margin:0}@media (min-width:900px){.duo:has(#news-top:not(:empty)){grid-template-columns:1fr 1fr}}
+.today .item{width:100%;text-align:left;border:0;background:none;font:inherit;color:inherit;display:flex;align-items:center;gap:12px}.today .ic-s{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--soft,#eef6f5);flex:none}.today.ok{color:var(--good,#047857)}.tmbox{border:1px dashed var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:8px}
 .mrow .field label{font-size:.82rem;font-weight:500;color:var(--muted)}
 .mrow.billed{grid-template-columns:1fr;color:var(--muted)}
 .meter{height:8px;border-radius:999px;background:var(--sunk);overflow:hidden;border:1px solid var(--line)}
@@ -482,6 +485,69 @@ a.gal-i{align-items:center;justify-content:center;aspect-ratio:1;border:1px soli
   html.print-mode #printroot{display:block}html.print-mode .doc{padding:0;font-size:13.5pt}@page{margin:16mm}}
 /*@@SHAREDCSS@@*/
 
+/* ===== หน้าตาใหม่สำหรับแพ็กเกจโปร (ตระกูลเดียวกับ Residence Cloud สีเขียวอมฟ้า) · ฉบับฟรีใช้หน้าตาเดิม ===== */
+html[data-plan="pro"]{--f-body:"IBM Plex Sans Thai",system-ui,sans-serif;--glass:#FFFFFF;--glass-b:#E3E8F0;--blur:none;--blue:#2563EB;--blue-soft:#EFF4FF;--violet:#7C3AED;--violet-soft:#F3EEFF}
+html[data-plan="pro"] body::before{display:none}
+html[data-plan="pro"] .av{background:linear-gradient(135deg,#2DD4BF,#0F766E);color:#fff}
+html[data-plan="pro"] .who,html[data-plan="pro"] .fs{background:#fff;border-color:var(--line)}
+html[data-plan="pro"] .demo{background:#fff;border-bottom-color:var(--line)}
+html[data-plan="pro"] .modal-box{background:#fff;border:1px solid var(--line);backdrop-filter:none}
+html[data-plan="pro"] .input{background:#fff;border-color:#D5DCE7;border-radius:10px}
+html[data-plan="pro"] .input:focus{border-color:#14B8A6;box-shadow:0 0 0 4px rgba(20,184,166,.16)}
+html[data-plan="pro"] .btn{border-radius:10px}
+html[data-plan="pro"] .btn-acc,html[data-plan="pro"] .cam,html[data-plan="pro"] .big-act.btn-acc{background:#0F766E;border-color:#0F766E;color:#fff;box-shadow:0 6px 14px -8px #0F766E}
+html[data-plan="pro"] .big-act.btn-line,html[data-plan="pro"] .btn-line{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 1px 2px rgba(15,23,42,.05)}
+html[data-plan="pro"] .big-act{border-radius:14px}
+html[data-plan="pro"] .back{background:#fff;border:1px solid var(--line);border-radius:10px}
+html[data-plan="pro"] .seg button[aria-pressed="true"],html[data-plan="pro"] .tabs button[aria-selected="true"],html[data-plan="pro"] .fs button[aria-pressed="true"]{background:#0F766E;color:#fff}
+html[data-plan="pro"] .chip{background:#fff;border-color:var(--line)}
+html[data-plan="pro"] .chip[aria-pressed="true"]{background:#0E1628;border-color:#0E1628;color:#fff}
+html[data-plan="pro"] .sk{background:linear-gradient(90deg,#EEF2F7 25%,#F8FAFC 40%,#EEF2F7 60%);background-size:400% 100%}
+html[data-plan="pro"] .ic{background:#E6F6F4;color:#0F766E;border-radius:12px}
+html[data-plan="pro"] .tile .ic,html[data-plan="pro"] .tile.t0 .ic,html[data-plan="pro"] .tile.t1 .ic,html[data-plan="pro"] .tile.t2 .ic,html[data-plan="pro"] .tile.t3 .ic{background:#E6F6F4;color:#0F766E;box-shadow:none;width:44px;height:44px;border-radius:12px}
+html[data-plan="pro"] .tile.t1 .ic{background:#EFF4FF;color:#2563EB}html[data-plan="pro"] .tile.t2 .ic{background:#F3EEFF;color:#7C3AED}html[data-plan="pro"] .tile.t3 .ic{background:#FEF3DD;color:#B45309}
+html[data-plan="pro"] .count b{background:none;-webkit-text-fill-color:currentColor;color:var(--ink)}
+html[data-plan="pro"] .tile.tadm{background:#0B1A1E;color:#fff;border-color:#0B1A1E}html[data-plan="pro"] .tile.tadm h3{color:#fff}
+html[data-plan="pro"] .tile.tadm p{color:#AEB8CC}html[data-plan="pro"] .tile.tadm .ic{background:#173339;color:#5EEAD4}
+html[data-plan="pro"] .hero{box-shadow:0 18px 40px -18px rgba(15,118,110,.6)}
+html[data-plan="pro"] .hero .h-bar i{background:linear-gradient(90deg,#fff,#CCFBF1)}
+
+html[data-plan="pro"]{--bg:#F3F5F9;--surface:#FFFFFF;--sunk:#F8FAFC;--ink:#0E1628;--muted:#4A5568;--line:#E3E8F0;
+  --teal:#0F766E;--teal-soft:#E6F6F4;--acc:#0F766E;--m1:#0F766E;--m2:#2563EB;--m3:#7C3AED;--m4:#D97706;
+  --shadow:0 1px 2px rgba(15,23,42,.05),0 1px 1px rgba(15,23,42,.03);--f-head:"IBM Plex Sans Thai",system-ui,sans-serif}
+html[data-plan="pro"] body{background:var(--bg)}
+html[data-plan="pro"] .top{background:color-mix(in srgb,#F3F5F9 85%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line);box-shadow:none}
+html[data-plan="pro"] .mark{background:linear-gradient(135deg,#2DD4BF,#0F766E 60%,#134E4A);color:#fff;border-radius:11px;box-shadow:0 6px 16px -6px #0F766E}
+html[data-plan="pro"] .pro-b{background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff}
+html[data-plan="pro"] .panel{border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);background:var(--surface)}
+html[data-plan="pro"] .tiles{gap:12px}
+html[data-plan="pro"] .tile{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);color:var(--ink);transition:transform .12s,box-shadow .12s}
+html[data-plan="pro"] .tile:hover{transform:translateY(-2px);box-shadow:0 8px 20px -8px rgba(15,23,42,.18)}
+html[data-plan="pro"] .tile .ic{background:var(--teal-soft);color:var(--teal);border-radius:12px}
+html[data-plan="pro"] .tile h3{color:var(--ink)}html[data-plan="pro"] .tile p{color:var(--muted)}
+html[data-plan="pro"] .tile .count b{color:var(--ink)}
+html[data-plan="pro"] .btn-acc{background:var(--teal);border-color:var(--teal);box-shadow:0 6px 14px -8px var(--teal)}
+html[data-plan="pro"] .hello h2{font-weight:600;letter-spacing:-.01em}
+html[data-plan="pro"] .today{border-left:4px solid var(--teal)}
+html[data-plan="pro"] .hero{background:radial-gradient(120% 120% at 100% 0%,#2DD4BF 0%,transparent 55%),linear-gradient(135deg,#134E4A,#0F766E 60%,#115E59);color:#fff;border:0}
+.pside{display:none}
+@media (min-width:1024px){
+  html[data-plan="pro"].has-side body{padding-left:256px}
+  html[data-plan="pro"].has-side .pside{display:flex;position:fixed;left:0;top:0;bottom:0;width:256px;background:#0B1A1E;color:#AEB8CC;flex-direction:column;padding:16px 12px;gap:4px;z-index:30;overflow-y:auto}
+  html[data-plan="pro"].has-side .top .brand{visibility:hidden}
+  html[data-plan="pro"].has-side main{max-width:1180px}
+  .pside .pb{display:flex;align-items:center;gap:10px;padding:4px 8px 16px}.pside .pb .mark{width:36px;height:36px;display:grid;place-items:center}
+  .pside .pb b{color:#fff;display:block;font-size:.95rem;line-height:1.2}.pside .pb small{color:#6B778F;font-size:.72rem;letter-spacing:.04em}
+  .pside .grp{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#6B778F;padding:12px 10px 4px}
+  .pside button.nv{display:flex;align-items:center;gap:11px;width:100%;padding:9px 10px;border-radius:10px;border:0;background:none;color:#C9D2E3;font:inherit;font-size:.92rem;cursor:pointer;text-align:left;position:relative}
+  .pside button.nv:hover{background:#13272C;color:#fff}.pside button.nv[aria-current="page"]{background:#173339;color:#fff}
+  .pside button.nv[aria-current="page"]::before{content:"";position:absolute;left:-12px;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:#5EEAD4}
+  .pside button.nv svg{width:20px;height:20px}.pside .cnt{margin-left:auto;min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:#24434A;color:#E2E8F0;font-size:.72rem;display:grid;place-items:center;font-weight:600}
+  .pside .cnt.hot{background:#F59E0B;color:#1F1300}.pside .lk{margin-left:auto;font-size:.7rem;color:#F5B94A}
+  .pside .ft{margin-top:auto;padding:10px;border-top:1px solid #18303A;font-size:.75rem;color:#6B778F;display:flex;align-items:center;gap:8px}
+  .pside .ft button{margin-left:auto;background:#13272C;border:1px solid #1F3A41;color:#C9D2E3;border-radius:8px;padding:4px 10px;font:inherit;font-size:.75rem;cursor:pointer}
+}
+
 /* ===== ใช้ร่วม: หน้าเชื่อมชีต + ผู้ช่วยคู่มือ ===== */
 .cn-h{display:flex;gap:12px;align-items:flex-start}.cn-h>svg{width:34px;height:34px;flex:none;color:var(--acc,#5b5bd6)}
 .cn-steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}.cn-steps li span{display:block;font-size:.88em;color:var(--muted)}
@@ -510,6 +576,14 @@ html[data-public] .helpfab,html.printing .helpfab{display:none}
 .hp .tabs{display:flex;gap:6px}.hp .tabs button{flex:1;display:inline-flex;gap:6px;align-items:center;justify-content:center;min-height:44px;white-space:nowrap;padding:0 8px;font-size:.92em}
 .hp .tabs button svg,.hp .linkbtn svg,.hp .alert svg{width:18px;height:18px;flex:none}.hp .linkbtn{display:inline-flex;gap:4px;align-items:center}
 .hp .btn svg{width:20px;height:20px}
+
+/* แถบเมนูซ้ายฉบับโปร (5 แอป): ชื่อร้านด้านบนยังกดกลับหน้าแรกได้ */
+html[data-plan="pro"].has-side .top .brand{visibility:visible}
+/* กล่อง "งานวันนี้" ในหน้าแรก (ใช้ทุกแอป) */
+.today .item{width:100%;text-align:left;border:0;background:none;font:inherit;color:inherit;display:flex;align-items:center;gap:12px}
+.today .ic-s{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--mute-bg);flex:none}
+.today .ic-s.bad{background:var(--bad-bg);color:var(--bad)}
+.zhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:4px 0 8px}.zhead h3{margin:0}
 
 /* ===== ที่พักรายวัน / โรงแรม ===== */
 .kbtn{text-align:left;cursor:pointer;font:inherit;color:inherit}.kbtn:active{transform:scale(.98)}.kpi.bad{border-color:var(--bad)}.kpi.bad b{color:var(--bad)}
@@ -552,6 +626,10 @@ html[data-public] .helpfab,html.printing .helpfab{display:none}
 @media print{html.print-roll #printroot .doc{font-size:8.5pt;padding:0}html.print-roll .doc-tbl td,html.print-roll .doc-tbl th{padding:2px 3px;border:0;border-bottom:1px dashed #999}
   html.print-roll .doc-meta{flex-direction:column;gap:0}html.print-roll .doc-t{font-size:11pt;margin:2px 0 4px}html.print-roll .doc-org{font-size:11pt}}
 .demo .seg button{white-space:nowrap}
+
+/* แม่บ้าน: ลำดับงาน · ทะเบียนผู้พัก */
+.hno{display:inline-block;font-size:12px;font-weight:700;background:var(--bad-bg);color:var(--bad);border-radius:99px;padding:1px 8px;margin-bottom:4px}
+.ckrow{display:flex;gap:8px;align-items:center;margin:6px 0}.ckrow input{width:20px;height:20px}
 </style>
 </head>
 <body>
@@ -711,6 +789,7 @@ function ppPayload(id,amt){id=String(id||'').replace(/\D/g,'');const f=(t,v)=>t+
   const s=f('00','01')+f('01',a?'12':'11')+f('29',f('00','A000000677010111')+acc)+f('58','TH')+f('53','764')+(a?f('54',a):'')+'6304';
   return s+crc16(s)}
 const ppShow=id=>{id=String(id||'');return id.length===10?id.slice(0,3)+'-'+id.slice(3,6)+'-'+id.slice(6):id.length===13?id[0]+'-'+id.slice(1,5)+'-'+id.slice(5,10)+'-'+id.slice(10,12)+'-'+id[12]:id};
+let qrLib=null;
 const loadQR=()=>qrLib||(qrLib=new Promise((res,rej)=>{if(window.qrcode)return res(window.qrcode);const s=document.createElement('script');
   s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';s.onload=()=>window.qrcode?res(window.qrcode):rej(new Error('no qr'));
   s.onerror=()=>{qrLib=null;s.remove();rej(new Error('โหลดตัวสร้าง QR ไม่ได้'))};document.head.appendChild(s)}));
@@ -761,6 +840,7 @@ function apiUrl(){
   const k=store.get(CONNECT_KEY);return k&&KEY_RE.test(k)?'https://script.google.com/macros/s/'+k+'/exec':'';
 }
 const NEED_CONNECT=!DEMO&&!apiUrl();
+{const m=document.getElementById('mark');if(m&&!m.innerHTML.trim())m.innerHTML=icon('logo')}   // โลโก้มุมบนขึ้นตั้งแต่หน้าแรก (ก่อนเชื่อมชีต / ก่อนเข้าสู่ระบบ)
 const shopLink=()=>{const k=keyOf(apiUrl());return k?location.origin+location.pathname.replace(/[^/]*$/,'')+'?k='+k:''};
 function vConnect(){
   document.documentElement.dataset.public='1';
@@ -887,6 +967,9 @@ sections:[
   'ไม่ต้องเก็บรูปบัตรประชาชนของแขกในแอป']}
 ],
 faq:[
+ ['ดูห้องทั้งเดือน','เปิด "ผังห้อง" แล้วกด "ทั้งเดือน" · ปุ่มก่อนหน้า / ถัดไป เลื่อนทีละเดือน'],
+ ['ทะเบียนผู้พัก และ ตม.30','ให้แขกกรอกแบบฟอร์มกระดาษ เก็บไว้ที่ที่พัก แล้วติ๊ก "กรอกทะเบียนผู้พักแล้ว" ในการจอง · แขกต่างชาติติ๊ก "แขกต่างชาติ" และใส่วันที่แจ้ง ตม.30 · แอปไม่เก็บเลขบัตรหรือพาสปอร์ต และเตือนในหน้าแรกถ้ายังไม่แจ้ง'],
+ ['แม่บ้านทำห้องไหนก่อน','หน้า "แม่บ้าน" เรียงให้แล้ว: ห้องที่แขกจะเข้าวันนี้ขึ้นก่อน (ป้าย "ด่วน") ตามด้วยห้องที่แขกออกวันนี้'],
  ['แขกขอเลื่อนวัน ทำอย่างไร','กดที่การจอง → แก้ไข แล้วเลือกวันใหม่ แอปจะตรวจให้ว่าห้องว่างไหม'],
  ['แขกยกเลิกการจอง','กดที่การจอง → ยกเลิก ห้องจะว่างขายต่อได้ทันที มัดจำคืนหรือไม่ ตามนโยบายของที่พัก'],
  ['ทำไมห้องไม่ขึ้นให้เลือก','ห้องนั้นมีการจองในช่วงวันที่เลือกแล้ว หรือปิดห้องไว้ในหน้า "ห้องพัก"'],
@@ -934,6 +1017,41 @@ function helpOpen(start){
 document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('[data-help]');if(t){e.preventDefault();helpOpen(t.dataset.help?{sec:t.dataset.help}:null)}});
 const helpRow=()=>`<button type="button" class="helprow" data-help>${botSvg(40)}<span><b>คู่มือการใช้งาน</b><span class="small muted">${BOT_NAME}พาดูทีละขั้น · คำถามที่พบบ่อย · ลิงก์ร้าน</span></span>${icon('chev')}</button>`;
 
+/* แถบเมนูด้านซ้ายของฉบับโปร (จอกว้าง 1024px ขึ้นไป) ใช้ร่วมกับแอปร้านอาหาร นัดคิว ร้านค้า ร้านซ่อม ที่พักรายวัน
+   อ่านรายการเมนูจากไทล์ในหน้าแรก (#tiles .tile[data-go]) จึงไม่ต้องเขียนเมนูซ้ำในแต่ละแอป · หน้าตาใช้ CSS .pside จากแอปหอพัก */
+(function(){
+  let NAV=[],synced=Date.now(),busyNav=false,raf=0;
+  const root=document.documentElement;
+  const grab=()=>{const T=document.querySelectorAll('#tiles>.tile[data-go]');if(!T.length)return;
+    NAV=[...T].map(t=>({go:t.dataset.go,label:((t.querySelector('h3')||t).textContent||'').trim(),ic:(t.querySelector('.ic')||{}).innerHTML||'',
+      badge:((t.querySelector('.badge')||{}).textContent||'').trim(),lock:t.classList.contains('tlock')}))};
+  const isOn=()=>{try{return PRO()&&!!ME&&!!BIZ&&!root.dataset.public&&!root.dataset.kitchen&&!['login','register','forgot','must'].includes(view.name)}catch(e){return false}};
+  const openTile=g=>{const t=document.querySelector(`#tiles>.tile[data-go="${g}"]`);if(t){t.click();return}
+    if(busyNav)return;busyNav=true;go('home');let n=0;
+    const w=setInterval(()=>{const x=document.querySelector(`#tiles>.tile[data-go="${g}"]`);if(x||++n>40){clearInterval(w);busyNav=false;if(x)x.click()}},100)};
+  function paint(){
+    const on=isOn();root.classList.toggle('has-side',on);
+    let el=document.getElementById('pside');if(!on){if(el)el.innerHTML='';return}
+    grab();
+    if(!el){el=document.createElement('aside');el.id='pside';el.className='pside';el.setAttribute('aria-label','เมนูหลัก');document.body.prepend(el)}
+    const cur=view.name==='admin'?'admin':view.name;
+    const nv=x=>`<button class="nv" data-sn="${esc(x.go)}" ${cur===x.go?'aria-current="page"':''}>${x.ic}${esc(x.label)}${x.lock?'<span class="lk">โปร</span>':x.badge?`<span class="cnt">${esc(x.badge)}</span>`:''}</button>`;
+    const work=NAV.filter(x=>x.go!=='admin'),adm=NAV.filter(x=>x.go==='admin');
+    el.innerHTML=`<div class="pb"><span class="mark">${icon('logo')}</span><div><b>${esc(BIZ.org||'')}</b><small>${esc(document.title)} · PRO</small></div></div>
+      <button class="nv" data-sn="home" ${cur==='home'?'aria-current="page"':''}>${icon('home')}หน้าแรก</button>
+      ${work.length?`<div class="grp">งานประจำวัน</div>${work.map(nv).join('')}`:''}${adm.length?`<div class="grp">จัดการ</div>${adm.map(nv).join('')}`:''}
+      <div class="ft"><span id="psync">อัปเดตเมื่อสักครู่</span><button id="prf" title="ดึงข้อมูลล่าสุดจากชีต">ดึงข้อมูลล่าสุด</button></div>`;
+    el.querySelectorAll('[data-sn]').forEach(b=>b.onclick=()=>{const g=b.dataset.sn;g==='home'?go('home'):openTile(g)});
+    document.getElementById('prf').onclick=()=>{synced=Date.now();render();toast('ดึงข้อมูลล่าสุดแล้ว')};
+  }
+  const later=()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(paint)};
+  const start=()=>{const a=document.getElementById('app');if(!a)return setTimeout(start,200);
+    new MutationObserver(later).observe(a,{childList:true,subtree:true});
+    new MutationObserver(later).observe(root,{attributes:true,attributeFilter:['data-plan','data-public','data-kitchen']});later()};
+  start();
+  setInterval(()=>{const e=document.getElementById('psync');if(e){const s=Math.round((Date.now()-synced)/1e3);e.textContent=s<15?'อัปเดตเมื่อสักครู่':s<3600?'อัปเดต '+Math.round(s/60)+' นาทีที่แล้ว':'กดดึงข้อมูลล่าสุด'}},15e3);
+})();
+
 /* ===================== แอปที่พักรายวัน / โรงแรม: หน้าจอ ===================== */
 const ROLE_TH={admin:'เจ้าของ',staff:'พนักงาน'};
 const can=f=>!!ME&&(ME.role==='admin'||(ME.can||[]).includes(f));
@@ -975,7 +1093,7 @@ function vHome(){
     <div class="hello"><div><div class="date">วัน${TH_DAY[d.getDay()]}ที่ ${d.getDate()} ${TH_MON[d.getMonth()]} ${d.getFullYear()+543}</div>
       <h2>${hr<12?'สวัสดีตอนเช้า':hr<17?'สวัสดีตอนบ่าย':'สวัสดีตอนเย็น'} คุณ${esc(ME.nick||ME.first)}</h2></div></div>
     ${can('book')?`<button class="btn btn-acc big-act" id="go-new">${icon('plus')}จอง${esc(UN())}</button>`:''}
-    <div class="kpis" id="hk">${'<div class="sk"></div>'.repeat(4)}</div><div id="h-l" class="stack"></div>
+    <div class="kpis" id="hk">${'<div class="sk"></div>'.repeat(4)}</div><div id="today"></div><div id="h-l" class="stack"></div>
     <div class="tiles" id="tiles"></div>${helpRow()}${logoutBtn()}</div>`;
   const gn=$('#go-new');if(gn)gn.onclick=()=>go('new');
   run('apiHome',tok()).then(h=>{if(!$('#hk'))return;
@@ -983,12 +1101,18 @@ function vHome(){
     $('#hk').innerHTML=k('เข้าพักคืนนี้',h.occ+'%',`ว่าง ${h.free} ${esc(UN())}`,'board')+k('แขกเข้าวันนี้',h.arrive.length,'การจอง','books')+k('แขกออกวันนี้',h.leave.length,'การจอง','books',h.leave.length?'bad':'')
       +k('รอทำความสะอาด',h.dirty.length,esc(UN())+(h.fix.length?` · ปิดซ่อม ${h.fix.length}`:''),'house',h.dirty.length?'bad':'')+(h.money?k('รับเงินวันนี้',baht(h.money.today),'บาท · เดือนนี้ '+baht(h.money.month),'books'):'')
       +k('พักอยู่ตอนนี้',h.inhouse,'การจอง · 7 วันข้างหน้า '+h.next7,'books');
+    {const I=[],it=(ic,t2,sub,to,cls)=>I.push(`<button class="item click" data-tgo="${to}"><span class="ic-s${cls?' '+cls:''}">${icon(ic)}</span><div class="item-main"><b>${t2}</b><div class="item-sub">${sub}</div></div></button>`);
+      if((h.cleanFirst||[]).length)it('broom',`ทำความสะอาดก่อน: ${esc(UN())} ${h.cleanFirst.map(esc).join(', ')}`,'มีแขกเข้าวันนี้ แต่ยังรอทำความสะอาด','house','bad');
+      if((h.tm30||[]).length)it('doc',`แขกต่างชาติยังไม่แจ้ง ตม.30 ${h.tm30.length} ราย`,'ต้องแจ้งภายใน 24 ชั่วโมงหลังเข้าพัก · '+h.tm30.map(b=>UN()+' '+esc(b.room)).join(', '),'book:'+h.tm30[0].id,'bad');
+      if((h.noDep||[]).length&&can('book'))it('cash',`ยังไม่ได้รับมัดจำ ${h.noDep.length} การจอง (7 วันข้างหน้า)`,h.noDep.slice(0,4).map(b=>esc(dS(b.cin))+' '+esc(b.guest)).join(' · '),'book:'+h.noDep[0].id);
+      const el=$('#today');el.innerHTML=I.length?`<section class="panel today"><h3>${icon('check','pico')} งานวันนี้</h3><div class="list">${I.join('')}</div></section>`:'';
+      el.querySelectorAll('[data-tgo]').forEach(b=>b.onclick=()=>{const [g,id]=b.dataset.tgo.split(':');id?go('book',{id}):go(g)})}
     const sec=(t,ls,act)=>ls.length?`<section class="panel"><h3>${t} (${ls.length})</h3><div class="list">${ls.map(b=>`<div class="item"><div class="item-main click" data-b="${esc(b.id)}"><b>${esc(UN())} ${esc(b.room)} · ${esc(b.guest)}</b><div class="item-sub">${esc(dS(b.cin))} – ${esc(dS(b.cout))} · ${b.pax} คน${b.bal>0?` · <b class="late">ค้าง ${baht(b.bal)}</b>`:''}</div></div>${act&&can('book')?`<button class="btn btn-acc btn-sm" data-a="${act}" data-id="${esc(b.id)}">${act==='in'?'เช็กอิน':'เช็กเอาต์'}</button>`:''}</div>`).join('')}</div></section>`:'';
     $('#h-l').innerHTML=sec(`${icon('login','pico')} แขกเข้าวันนี้`,h.arrive,'in')+sec(`${icon('logout','pico')} ถึงเวลาออกวันนี้`,h.leave,'out')
       +(h.late.length?`<section class="panel alert warn"><h3>เลยวันเข้าพักแต่ยังไม่เช็กอิน (${h.late.length})</h3><div class="small">ตรวจว่าแขกมาสายหรือไม่มาตามนัด แล้วกดเปิดเพื่อบันทึก</div><div class="list">${h.late.map(bItem).join('')}</div></section>`:'');
     bindB($('#h-l'));$('#h-l').querySelectorAll('.item-main[data-b]').forEach(x=>x.onclick=()=>go('book',{id:x.dataset.b}));
     $('#h-l').querySelectorAll('[data-a]').forEach(b=>b.onclick=e=>{e.stopPropagation();go('book',{id:b.dataset.id,act:b.dataset.a})});
-    const T=[['board','ผัง'+UN(),'ปฏิทินห้องว่าง / มีแขก 2 สัปดาห์','calendar','',true],['books','การจอง','ค้นหา เช็กอิน เช็กเอาต์ รับเงิน','doc','',can('book')||can('report')],
+    const T=[['board','ผัง'+UN(),'ปฏิทินว่าง / มีแขก 2 สัปดาห์ หรือทั้งเดือน','calendar','',true],['books','การจอง','ค้นหา เช็กอิน เช็กเอาต์ รับเงิน','doc','',can('book')||can('report')],
       ['house','แม่บ้าน','สถานะทำความสะอาด',`broom`,h.dirty.length?h.dirty.length+' รอทำ':'',can('house')||can('book')],['rooms','ตั้งค่า'+UN()+'และราคา','เพิ่ม'+UN()+' ราคาต่อคืน','bed','',can('rooms')],
       ['report','รายงาน','อัตราเข้าพัก ราคาเฉลี่ย รายได้','chart','',can('report')||locked('report')]];
     $('#tiles').innerHTML=T.filter(t=>t[5]).map((t,i)=>{const lk=locked(t[0]);return `<button class="tile t${i%4}${lk?' tlock':''}" data-go="${t[0]}">${lk?`<span class="lockflag">${icon('lock')}โปร</span>`:''}<div class="tile-top"><span class="ic">${icon(t[3])}</span>${t[4]&&!lk?`<span class="flag">${esc(t[4])}</span>`:''}</div><div><h3>${esc(t[1])}</h3><p>${esc(t[2])}</p></div></button>`}).join('')
@@ -1004,9 +1128,9 @@ function vHome(){
 
 /* ---------- ผังห้องแบบปฏิทิน ---------- */
 function vBoard(){
-  let from=view.from||addD(today(),-1);const days=14;
+  const month=!!view.month;let from=view.from||(month?today().slice(0,8)+'01':addD(today(),-1));const days=month?new Date(+from.slice(0,4),+from.slice(5,7),0).getDate():14;
   app.innerHTML=`<div class="stack">${backHead('ผัง'+UN(),'แตะช่องว่างเพื่อจอง · แตะแถบสีเพื่อเปิดการจอง','calendar')}
-    <div class="toolbar"><div class="chips"><button class="chip" id="bp">‹ ก่อนหน้า</button><button class="chip" id="bt">วันนี้</button><button class="chip" id="bn">ถัดไป ›</button></div>
+    <div class="toolbar"><div class="chips"><button class="chip" id="bm2" aria-pressed="${!month}">2 สัปดาห์</button><button class="chip" id="bm" aria-pressed="${month}">ทั้งเดือน</button></div><div class="chips"><button class="chip" id="bp">‹ ก่อนหน้า</button><button class="chip" id="bt">วันนี้</button><button class="chip" id="bn">ถัดไป ›</button></div>
       <input class="input" type="date" id="bd" value="${from}" style="width:auto" aria-label="เริ่มที่วันที่"></div>
     <div class="legend2"><span><i style="background:#dbe7fb"></i>จองแล้ว</span><span><i style="background:#d4f0de"></i>เข้าพัก</span><span><i style="background:#e9ecef"></i>ออกแล้ว</span><span><i style="background:var(--bad)"></i>ค้างชำระ</span></div>
     <div id="bg">${loadingList}</div></div>`;
@@ -1023,8 +1147,11 @@ function vBoard(){
     $('#bg').querySelectorAll('[data-new]').forEach(b=>b.onclick=()=>{if(!can('book'))return;if(b.dataset.d<td)return toast('เลือกวันนี้หรือหลังจากนี้');go('new',{room:b.dataset.new,cin:b.dataset.d})});
     const tdc=$('#bg').querySelector('th.td');if(tdc){const bd=$('#bg .board');bd.scrollLeft=Math.max(0,tdc.offsetLeft-80)}
   }).catch(e=>{const g=$('#bg');if(g)g.innerHTML=errBox(e.message)});
-  $('#bp').onclick=()=>{from=view.from=addD(from,-7);$('#bd').value=from;load()};$('#bn').onclick=()=>{from=view.from=addD(from,7);$('#bd').value=from;load()};
-  $('#bt').onclick=()=>{from=view.from=addD(today(),-1);$('#bd').value=from;load()};$('#bd').onchange=()=>{from=view.from=$('#bd').value||today();load()};
+  const mStart=(d,n)=>{const x=new Date(+d.slice(0,4),+d.slice(5,7)-1+n,1);return isoD(x)};
+  $('#bm').onclick=()=>go('board',{month:true});$('#bm2').onclick=()=>go('board',{month:false});
+  $('#bp').onclick=()=>{if(month)return go('board',{month:true,from:mStart(from,-1)});from=view.from=addD(from,-7);$('#bd').value=from;load()};
+  $('#bn').onclick=()=>{if(month)return go('board',{month:true,from:mStart(from,1)});from=view.from=addD(from,7);$('#bd').value=from;load()};
+  $('#bt').onclick=()=>{if(month)return go('board',{month:true});from=view.from=addD(today(),-1);$('#bd').value=from;load()};$('#bd').onchange=()=>{const v=$('#bd').value||today();if(month)return go('board',{month:true,from:v.slice(0,8)+'01'});from=view.from=v;load()};
   load();
 }
 
@@ -1113,12 +1240,20 @@ function paintBook(b){
       <div class="dline"><b>ยอดรวม</b><b class="amt">${money(b.total)}</b></div></div>
       <div class="paysum" style="margin-top:8px">${(b.pays||[]).map(p=>`<div><span>${esc(p.k||(p.amt<0?'คืนเงิน':'รับเงิน'))} · ${esc(p.m)} · ${esc(p.at)}</span><b>${p.amt<0?'−':''}${money(Math.abs(p.amt))}</b></div>`).join('')||'<div class="muted">ยังไม่ได้รับเงิน</div>'}
         <div class="${b.bal>0?'bad':'ok'}"><span>${b.bal>0?'คงเหลือ':'ชำระครบแล้ว'}</span><b>${b.bal>0?money(b.bal)+' บาท':''}</b></div></div></section>
+    ${b.st!=='cancel'?`<section class="panel"><h3>ทะเบียนผู้พัก</h3>
+      <label class="small ckrow"><input type="checkbox" id="g-reg" ${b.reg?'checked':''} ${can('book')?'':'disabled'}>แขกกรอกทะเบียนผู้พัก (แบบกระดาษ) แล้ว</label>
+      <label class="small ckrow"><input type="checkbox" id="g-for" ${b.foreign?'checked':''} ${can('book')?'':'disabled'}>แขกต่างชาติ (ต้องแจ้ง ตม.30 ภายใน 24 ชั่วโมง)</label>
+      <div class="field" id="g-tmf" ${b.foreign?'':'hidden'}><label for="g-tm">แจ้ง ตม.30 แล้ววันที่</label><input class="input" type="date" id="g-tm" value="${esc(b.tm30||'')}" style="width:auto" ${can('book')?'':'disabled'}></div>
+      <div class="small muted">แอปไม่เก็บเลขบัตรประชาชนหรือหนังสือเดินทาง เก็บแบบฟอร์มกระดาษไว้ที่ที่พัก</div><div id="g-e"></div></section>`:''}
     <section class="panel"><h3>ส่งให้แขก / เอกสาร</h3><div class="actions"><button class="btn btn-acc" id="a-send">${icon('chat')}ส่งยืนยันการจอง</button>${b.receipt?`<button class="btn btn-line" id="a-rc">${icon('receipt')}ใบเสร็จ</button>`:`<button class="btn btn-line" id="a-cf">${icon('doc')}ใบยืนยันการจอง</button>`}<a class="btn btn-line" data-gl href="${esc(guestUrl(b.tok))}" target="_blank" rel="noopener">เปิดดูแบบแขก</a></div></section>
     ${A.length?`<section class="panel"><h3>ทำต่อ</h3><div class="stack">${A.join('')}</div><div id="a-err"></div></section>`:''}
     <section class="panel"><h3>ประวัติ</h3><ol class="tl" style="list-style:none;padding-left:0">${(b.log||[]).map(l=>`<li class="small"><b>${esc(l.t)}</b><span class="muted"> · ${esc(l.at)}${l.by?' · '+esc(l.by):''}</span></li>`).join('')}</ol></section>`;
   const el=$('#bb'),onb=(id,fn)=>{const x=el.querySelector('#'+id);if(x)x.onclick=()=>fn(x)};
   onb('a-send',()=>sendBox(b));onb('a-rc',()=>docModal('ใบเสร็จ '+b.receipt.no,receiptHtml(b),'ใบเสร็จ '+b.receipt.no,true));onb('a-cf',()=>docModal('ใบยืนยันการจอง '+b.id,confirmHtml(b),'ยืนยันการจอง '+b.id,true));
   if(DEMO){const g=el.querySelector('[data-gl]');if(g)g.onclick=e=>{e.preventDefault();demoGuest(b.tok)}}
+  {const sv=d=>run('apiGuestReg',tok(),b.id,d).then(r=>{toast('บันทึกแล้ว');b=r;const f=el.querySelector('#g-tmf');if(f)f.hidden=!r.foreign}).catch(e=>{el.querySelector('#g-e').innerHTML=errBox(e.message)});
+    const rg=el.querySelector('#g-reg'),fo=el.querySelector('#g-for'),tm=el.querySelector('#g-tm');
+    if(rg)rg.onchange=()=>sv({reg:rg.checked});if(fo)fo.onchange=()=>sv({foreign:fo.checked});if(tm)tm.onchange=()=>sv({tm30:tm.value})}
   onb('a-in',()=>checkinForm(b));onb('a-out',()=>checkoutForm(b));onb('a-pay',()=>payForm(b));onb('a-ex',()=>extraForm(b));onb('a-ed',()=>go('new',{id:b.id}));onb('a-rf',()=>payForm(b,true));
   onb('a-ns',x=>{if(!x.dataset.arm){x.dataset.arm=1;x.textContent='กดอีกครั้งเพื่อยืนยัน ไม่มาตามนัด';return}busy(x,true);run('apiCancel',tok(),b.id,{noshow:true}).then(r=>{toast('บันทึกแล้ว');paintBook(r)}).catch(e=>{el.querySelector('#a-err').innerHTML=errBox(e.message);busy(x,false)})});
   onb('a-cx',()=>{const mm=modal(`<h2>ยกเลิกการจอง ${esc(b.id)}</h2><div class="muted">${esc(b.guest)} · ${esc(dS(b.cin))} – ${esc(dS(b.cout))}</div>
@@ -1217,14 +1352,15 @@ function vBooks(){
 
 /* ---------- แม่บ้าน ---------- */
 function vHouse(){
-  app.innerHTML=`<div class="stack">${backHead('แม่บ้าน','แตะ'+UN()+'เพื่อเปลี่ยนสถานะทำความสะอาด','broom')}<div class="chips" id="hf"></div><div class="hgrid" id="hg">${loadingList}</div></div>`;
+  app.innerHTML=`<div class="stack">${backHead('แม่บ้าน','ทำตามลำดับ: '+UN()+'ที่แขกจะเข้าวันนี้ก่อน · แตะเพื่อเปลี่ยนสถานะ','broom')}<div class="chips" id="hf"></div><div class="hgrid" id="hg">${loadingList}</div></div>`;
   let f=view.hf||'';
   const load=()=>Promise.all([run('apiRooms',tok()),run('apiBoard',tok(),today(),1)]).then(([rs,bd])=>{if(!$('#hg'))return;const t=today();
     const occ=id=>bd.books.find(b=>b.room===id&&b.st==='in'),lv=id=>bd.books.find(b=>b.room===id&&b.st==='in'&&b.cout<=t),ar=id=>bd.books.find(b=>b.room===id&&b.st==='book'&&b.cin===t);
     $('#hf').innerHTML=[['','ทั้งหมด'],['dirty','รอทำความสะอาด'],['ok','พร้อม'],['fix','ปิดซ่อม']].map(([k,l])=>`<button class="chip" data-f="${k}" aria-pressed="${k===f}">${l} (${k?rs.filter(r=>r.on&&r.clean===k).length:rs.filter(r=>r.on).length})</button>`).join('');
     app.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{f=view.hf=b.dataset.f;load()});
-    const ls=rs.filter(r=>r.on&&(!f||r.clean===f));
-    $('#hg').innerHTML=ls.length?ls.map(r=>`<button class="hc c-${r.clean}" data-r="${esc(r.id)}"><b>${esc(r.id)}</b><span>${esc(r.type)}</span><span class="st">${esc(BIZ.clean[r.clean])}</span>
+    const pri=r=>r.clean==='dirty'?(ar(r.id)?0:lv(r.id)?1:2):r.clean==='fix'?4:3;
+    const ls=rs.filter(r=>r.on&&(!f||r.clean===f)).sort((a,b)=>pri(a)-pri(b));let no=0;
+    $('#hg').innerHTML=ls.length?ls.map(r=>`<button class="hc c-${r.clean}" data-r="${esc(r.id)}">${r.clean==='dirty'?`<span class="hno">ลำดับ ${++no}${ar(r.id)?' · ด่วน':''}</span>`:''}<b>${esc(r.id)}</b><span>${esc(r.type)}</span><span class="st">${esc(BIZ.clean[r.clean])}</span>
       <span>${lv(r.id)?'แขกออกวันนี้':occ(r.id)?'มีแขกพักอยู่':ar(r.id)?'แขกเข้าวันนี้':'ว่าง'}</span>${r.note&&r.clean==='fix'?`<span>${esc(r.note)}</span>`:''}</button>`).join(''):'<div class="empty">ไม่มี'+esc(UN())+'ในหมวดนี้</div>';
     app.querySelectorAll('.hc[data-r]').forEach(x=>x.onclick=()=>{const r=rs.find(y=>y.id===x.dataset.r);const mm=modal(`<h2>${esc(UN())} ${esc(r.id)}</h2><div class="muted">${esc(r.type)} · ตอนนี้: ${esc(BIZ.clean[r.clean])}</div>
         <div class="stack" style="margin-top:10px">${Object.entries(BIZ.clean).map(([k,l])=>`<button class="btn ${k==='ok'?'btn-ok':k==='fix'?'btn-bad':'btn-line'} big-act" data-c="${k}" ${k===r.clean?'disabled':''}>${esc(l)}</button>`).join('')}</div>`);
